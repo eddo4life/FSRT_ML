@@ -1,3 +1,5 @@
+import sys
+
 import numpy as np
 import pandas as pd
 
@@ -64,7 +66,7 @@ def prediction(surface, anciennete, w):
 
 # Evaluationdu modele
 def metriques_regression(y_reel, y_pred):
-    y_true = np.asarray(y_rell, dtype=float)
+    y_true = np.asarray(y_reel, dtype=float)
     y_pred = np.asarray(y_pred, dtype=float)
 
     ss_res = np.sum((y_reel - y_pred) ** 2)
@@ -148,7 +150,8 @@ def main():
             break
 
         elif choix == "1":
-            nom = input("Nom et chemin du fichier Excel: ").strip()
+            # nom = input("Nom et chemin du fichier Excel: ").strip()
+            nom = 'prix_immeuble_surface_age.xlsx'
             try:
                 X, y, df = construire_Xy_biais(nom)
                 w = None  # on invalide le modèle si on recharge un dataset
