@@ -1,0 +1,1 @@
+Certaines colonnes sont présentes pour le réalisme et la traçabilité (TransactionId, ClientId, Commentaires). Elles ne doivent pas être utilisées comme variables d’entrée du modèle. Avant l’entraînement, vous devez constituer X en excluant ces colonnes, puis appliquer les pré-traitements uniquement sur les colonnes tabulaires retenues.
